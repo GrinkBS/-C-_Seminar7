@@ -6,7 +6,7 @@
 // 8 4 2 4
 // Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
 
-int[,] FillMatrix(int rowsCount, int columnsCount, int leftRange = -10, int rightRange = 10)
+int[,] FillMatrix(int rowsCount, int columnsCount, int leftRange = 0, int rightRange = 10)
 {
     int[,] matrix = new int[rowsCount, columnsCount];
 
@@ -37,15 +37,15 @@ void PrintMatrix(int[,] matrix)
 
 void GetAritmeticMeanByColumn(int[,] matrix)
 {
-    int sum = 0;
+    double sum = 0;
     for (int j = 0; j < matrix.GetLength(1); j++)
     {
         for (int i = 0; i < matrix.GetLength(0); i++)
         {
-            sum = sum + matrix[i,j];
+            sum = (sum + matrix[i,j]);
         }
-        Console.WriteLine(sum);
-    }
+    Console.WriteLine($"{sum/matrix.GetLength(0):f2}");
+    }  
     
 }
 
