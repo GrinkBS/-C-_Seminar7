@@ -55,7 +55,7 @@ int m1 = Convert.ToInt32(Console.ReadLine());
 
 Console.Write("Введите n: "); // Число столбцов
 int n1 = Convert.ToInt32(Console.ReadLine());
-if (m1 < matrix.GetLength(0) && n1 < matrix.GetLength(1))
+if ( m1 < matrix.GetLength(0) && n1 < matrix.GetLength(1))
 {
 int elementValue = matrix[m1, n1];
 Console.WriteLine(elementValue);

@@ -37,9 +37,9 @@ void PrintMatrix(int[,] matrix)
 
 void GetAritmeticMeanByColumn(int[,] matrix)
 {
-    double sum = 0;
     for (int j = 0; j < matrix.GetLength(1); j++)
     {
+        double sum = 0;
         for (int i = 0; i < matrix.GetLength(0); i++)
         {
             sum = (sum + matrix[i,j]);

@@ -19,7 +19,7 @@ double[,] FillMatrix(int rowsCount, int columnsCount, int leftRange = -10, int r
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
             // matrix[i, j] = rand.Next(leftRange, rightRange + 1);
-            matrix[i, j] = rand.NextDouble() * 10;
+            matrix[i, j] = rand.NextDouble() * (rightRange - leftRange) + leftRange;
         }
     }
 
